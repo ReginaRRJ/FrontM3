@@ -13,7 +13,7 @@ function Login() {
   const handleLogin = async () => {
     setError(null);
     try {
-      const response = await fetch('http://localhost:4000/login', {
+      const response = await fetch('https://pymex.azurewebsites.net/login', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ correo_electronico: user, contrasena }),
