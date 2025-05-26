@@ -28,7 +28,7 @@ function Dashboard() {
 
   const fetchUsuarios = async () => {
     try {
-      const response = await fetchConToken('http://localhost:4000/usuarios');
+      const response = await fetchConToken('https://pymex.azurewebsites.net/usuarios');
       const data = await response.json();
       if (response.ok) {
         setUsuarios(data);
@@ -97,7 +97,7 @@ function Dashboard() {
 
   const handleDeleteUser = async () => {
     try {
-      const response = await fetchConToken(`http://localhost:4000/usuarios/${selectedUser.id}`, {
+      const response = await fetchConToken(`https://pymex.azurewebsites.net/usuarios/${selectedUser.id}`, {
         method: 'DELETE',
       });
       const data = await response.json();
