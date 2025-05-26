@@ -70,8 +70,8 @@ function Dashboard() {
   }
 
   const url = isNewUser
-    ? 'http://localhost:4000/usuarios'
-    : `http://localhost:4000/usuarios/${selectedUser.id}`;
+    ? 'https://pymex.azurewebsites.net/usuarios'
+    : `https://pymex.azurewebsites.net/usuarios/${selectedUser.id}`;
   const method = isNewUser ? 'POST' : 'PUT';
 
   try {
